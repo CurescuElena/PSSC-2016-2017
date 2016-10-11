@@ -40,7 +40,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Interface\IDepartament.cs" />
+    <Compile Include="Interface\IRoom.cs" />
+    <Compile Include="Interface\ITimetable.cs" />
+    <Compile Include="Interface\IUniversityPerson.cs" />
+    <Compile Include="Interface\IProfessor.cs" />
+    <Compile Include="Interface\IStudent.cs" />
+    <Compile Include="Interface\ISubject.cs" />
+    <Compile Include="Interface\IFaculty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="source\Departament.cs" />
+    <Compile Include="source\Faculty.cs" />
+    <Compile Include="source\Professor.cs" />
+    <Compile Include="source\Room.cs" />
+    <Compile Include="source\Timetable.cs" />
+    <Compile Include="source\Student.cs" />
+    <Compile Include="source\UniversityPerson.cs" />
+    <Compile Include="source\Subject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
