@@ -39,12 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnStudiu.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Coeficient.cs" />
-    <Compile Include="Decanat.cs" />
-    <Compile Include="Disciplina.cs" />
-    <Compile Include="Discipline.cs" />
     <Compile Include="Interface\IDepartament.cs" />
     <Compile Include="Interface\IRoom.cs" />
     <Compile Include="Interface\ITimetable.cs" />
@@ -53,11 +48,6 @@
     <Compile Include="Interface\IStudent.cs" />
     <Compile Include="Interface\ISubject.cs" />
     <Compile Include="Interface\IFaculty.cs" />
-    <Compile Include="Laborator.cs" />
-    <Compile Include="Laboratore.cs" />
-    <Compile Include="Nota.cs" />
-    <Compile Include="Note.cs" />
-    <Compile Include="Profesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="source\Departament.cs" />
     <Compile Include="source\Faculty.cs" />
@@ -67,8 +57,6 @@
     <Compile Include="source\Student.cs" />
     <Compile Include="source\UniversityPerson.cs" />
     <Compile Include="source\Subject.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="TipDisciplina.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
