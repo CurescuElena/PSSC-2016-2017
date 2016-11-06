@@ -30,7 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GenericRepository, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GenericRepository.0.2.1.0\lib\net40\GenericRepository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GenericRepository.EF, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GenericRepository.EF.0.2.1.0\lib\net40\GenericRepository.EF.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,24 +56,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deanship\IReportPublisher.cs" />
-    <Compile Include="Deanship\StudyYear.cs" />
-    <Compile Include="Generics\Attendence.cs" />
-    <Compile Include="Generics\Credits.cs" />
+    <Compile Include="CommonRepository\GenericRepository.cs" />
+    <Compile Include="CommonRepository\IGenericRepository.cs" />
+    <Compile Include="Common\Professor\Professor.cs" />
+    <Compile Include="Common\Student\Student.cs" />
+    <Compile Include="Common\Subject\SubjectInformation.cs" />
+    <Compile Include="Context\Deanship\IReportPublisher.cs" />
+    <Compile Include="Context\Deanship\StudyYear.cs" />
+    <Compile Include="Context\Deanship\StudyYearFactory.cs" />
+    <Compile Include="Context\Deanship\SubjectSituation.cs" />
+    <Compile Include="Context\Professor\Subject.cs" />
+    <Compile Include="Context\Professor\SubjectFactory.cs" />
+    <Compile Include="Context\Professor\SubjectSituation.cs" />
+    <Compile Include="Context\Student\GradeReport.cs" />
+    <Compile Include="Context\Student\GradeReportFactory.cs" />
+    <Compile Include="Context\Student\SubjectSituation.cs" />
+    <Compile Include="Generics\ValueObjects\AttendenceValueObject.cs" />
+    <Compile Include="Generics\ValueObjects\CreditsValueObject.cs" />
     <Compile Include="Generics\Exceptions\InvalidCreditsValue.cs" />
-    <Compile Include="Generics\Grade.cs" />
-    <Compile Include="Generics\PlainText.cs" />
-    <Compile Include="Generics\Proportion.cs" />
-    <Compile Include="Generics\RegistrationNumber.cs" />
-    <Compile Include="Professor\Professor.cs" />
-    <Compile Include="Professor\Subjects.cs" />
+    <Compile Include="Generics\ValueObjects\GradeValueObject.cs" />
+    <Compile Include="Generics\ValueObjects\PlainTextValueObject.cs" />
+    <Compile Include="Generics\ValueObjects\ProportionValueObject.cs" />
+    <Compile Include="Generics\ValueObjects\RegistrationNumberValueObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student\GradeReport.cs" />
-    <Compile Include="Student\Student.cs" />
-    <Compile Include="Subject\EvaluationType.cs" />
-    <Compile Include="Subject\Subject.cs" />
-    <Compile Include="Subject\SubjectInformation.cs" />
-    <Compile Include="Subject\SubjectSituation.cs" />
+    <Compile Include="SubjectRepository\SubjectRepository.cs" />
+    <Compile Include="Generics\EvaluationType.cs" />
+    <Compile Include="Context\Deanship\Subject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
