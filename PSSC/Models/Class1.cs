@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Subject
+namespace Models
 {
-    public enum EvaluationType
+    public class Class1
     {
-        Distributed,
-        Exam
+        //remove or alter this class, then implement your models.  
     }
 }
